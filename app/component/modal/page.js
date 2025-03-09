@@ -14,6 +14,7 @@ const ModalPage = () => {
     ]
     return (
         <div>
+            <h1>Modal</h1>
             This is the Modal page
 
             <div className={styles["grid"]}>

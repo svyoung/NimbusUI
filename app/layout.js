@@ -4,6 +4,7 @@ import styles from "./page.module.scss"
 import StickyHeader from "@/components/StickyHeader";
 import ComponentMenu from "@/components/ComponentsMenu";
 import { componentList } from "@/lib/variables";
+import { pacifico, afacad } from "./fonts";
 
 export const metadata = {
   title: "Nimbus UI",
@@ -13,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${pacifico.variable} ${afacad.variable}`}>
       <main className={styles.main}>
           <header>
             <StickyHeader />

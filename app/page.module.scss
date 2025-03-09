@@ -1,9 +1,8 @@
 
-@import "./styles/fonts";
 @import "./styles/colors";
 
 .main {
-  @extend .primary-font;
+  font-family: var(--font-afacad);
   position: relative;
   height: 100%;
 

@@ -1,4 +1,3 @@
-@import "../app/styles/fonts";
 @import "../app/styles/colors";
 
 .header-wrapper {
@@ -15,7 +14,7 @@
     max-width: 100%;
 
     .nimbus-title {
-        @extend .title-font;
+        font-family: var(--font-pacifico);
         font-size: 1.9rem;
         color: $brand-primary;
 
