@@ -1,43 +1,51 @@
 
 @import "./styles/colors";
 
-.main {
-  font-family: var(--font-afacad);
-  position: relative;
-  height: 100%;
-
-  header {
-    display: initial;
-  }
-
-  .main-content {
-    display: table;
-    width: 100%;
-
-    .component-list-menu {
-      display: table-cell;
-      vertical-align: top;
-      width: 16rem;
-      background-color: $lightest-gray;
-      height: 100vh;
-      overflow: auto;
-      box-shadow: inset 1px 1px 10px $light-gray;
-  
-      .component-list-header {
-        font-size: 1.3rem;
-        font-weight: 400;
-        padding: 0.5rem 1rem;
-        color: $brand-secondary;
-        border-bottom: 1px dashed $white;
-      }
+@media (min-width: 250px) {
+  .main {
+    font-family: var(--font-afacad);
+    header {
+      box-shadow: 1px 1px 10px #cecece;
     }
 
-    .content {
-      display: table-cell;
-      overflow: auto;
-      color: rgb(74, 74, 74);
-      padding: 1rem 2rem;
+    .main-content {
+      display: block;
+
+      .content {
+        display: block;
+        padding: 1rem 1rem;
+      }
     }
   }
 }
+
+@media (min-width: 600px) {
+  .main {
+    position: relative;
+    height: 100%;
+  
+    .main-content {
+      display: table;
+      width: 100%;
+  
+      .sidebar {
+        display: table-cell;
+        vertical-align: top;
+        width: 16rem;
+        background-color: $lightest-gray;
+        height: 100vh;
+        overflow: auto;
+        box-shadow: inset 1px 1px 10px $light-gray;
+      }
+      .content {
+        display: table-cell;
+        overflow: auto;
+        color: rgb(74, 74, 74);
+        
+      }
+    }
+  }  
+}
+
+
 

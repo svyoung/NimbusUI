@@ -3,7 +3,6 @@ import "./globals.scss";
 import styles from "./page.module.scss"
 import StickyHeader from "@/components/StickyHeader";
 import ComponentMenu from "@/components/ComponentsMenu";
-import { componentList } from "@/lib/variables";
 import { pacifico, afacad } from "./fonts";
 
 export const metadata = {
@@ -20,9 +19,8 @@ export default function RootLayout({ children }) {
             <StickyHeader />
           </header>
           <div className={styles["main-content"]}>
-            <aside id="sidebar" className={styles["component-list-menu"]}>
-              <Link href="/"><h2 className={styles["component-list-header"]}>Components</h2></Link>
-              <ComponentMenu components={componentList} />
+            <aside className={styles["sidebar"]}>
+              <ComponentMenu />
             </aside>
             <div className={styles.content}>
               {children}

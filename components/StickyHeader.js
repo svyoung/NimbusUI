@@ -1,16 +1,21 @@
 "use client";
 
-import { usePathname } from 'next/navigation'
-import Link from "next/link";
+import { useState } from 'react';
+import Link from 'next/link';
+import ComponentMenu from './ComponentsMenu';
+import MobileHamburgerMenu from './MobileHamburgerMenu';
 import styles from "./styles.module.scss";
 
-const StickyHeader = () => {
-    const pathname = usePathname();
-
-    return <div className={styles["header-wrapper"]}>
-        <span className={styles["nimbus-title"]}>nimbus <span>UI</span></span>
-        <span>Created by Sam Vicki Young</span>
-    </div>
+const StickyHeader = ({ toggleMenu }) => {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+    return <>
+        <div className={styles["header-wrapper"]}>
+            <Link href="/" className={styles["nimbus-title"]}>nimbus <span>UI</span></Link>
+            <span className={styles["by-svy"]}>Created by Sam Vicki Young</span>
+            <MobileHamburgerMenu closeMenu={showMobileMenu} toggleMenu={() => setShowMobileMenu(!showMobileMenu)} />
+        </div>
+        <ComponentMenu mobile={showMobileMenu} exitMenu={() => setShowMobileMenu(false)} />
+    </>
 };
 
 export default StickyHeader;
