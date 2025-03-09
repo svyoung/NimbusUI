@@ -7,12 +7,12 @@ import { componentUrlPrefix } from "@/lib/variables";
 import { componentList } from "@/lib/variables";
 import styles from "./styles.module.scss";
 
-const ComponentMenu = ({ mobile, exitMenu }) => {
+const ComponentMenu = ({ isMobile, showMobileMenu, exitMenu }) => {
     const onClick = () => {
-        if(mobile) exitMenu();
+        if(isMobile) exitMenu();
     }
     const pathname = usePathname();
-    return <div className={`${styles["component-list-menu"]} ${mobile ? styles["menu-mobile"] : ""}`}>
+    return <div className={`${styles["component-list-menu"]} ${isMobile ? styles["menu-mobile"] : ""} ${showMobileMenu ? styles["show-mobile-menu"] : ""}`}>
                 <Link href="/"><h2 className={styles["component-list-header"]}>Components</h2></Link>
                 {
                     componentList.map(component => {

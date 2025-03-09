@@ -14,7 +14,7 @@ const StickyHeader = ({ toggleMenu }) => {
             <span className={styles["by-svy"]}>Created by Sam Vicki Young</span>
             <MobileHamburgerMenu closeMenu={showMobileMenu} toggleMenu={() => setShowMobileMenu(!showMobileMenu)} />
         </div>
-        <ComponentMenu mobile={showMobileMenu} exitMenu={() => setShowMobileMenu(false)} />
+        <ComponentMenu isMobile={true} showMobileMenu={showMobileMenu} exitMenu={() => setShowMobileMenu(false)} />
     </>
 };
 

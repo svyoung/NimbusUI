@@ -9,6 +9,11 @@ const Dropdown = (props) => {
 
     useClickOutside(optionsRef, () => setShowOptions(false));
 
+    const selectOption = (value) => {
+        if(onSelect) onSelect(value);
+        setShowOptions(!showOptions);
+    }
+
     return (
         <div>
             <div ref={optionsRef} className={`${styles["nimbus-dropdown-wrapper"]}`}>
@@ -23,7 +28,7 @@ const Dropdown = (props) => {
                 </div>
                 <div className={`${styles["options-wrapper"]} ${showOptions && styles["show"]}`}>
                     {options.map(option => (
-                        <div key={option.name} className={styles["option-list"]} onClick={() => onSelect(option.value)}>{option.name}</div>
+                        <div key={option.name} className={styles["option-list"]} onClick={() => selectOption(option.value)}>{option.name}</div>
                     ))}
                 </div>
             </div>
@@ -31,7 +36,5 @@ const Dropdown = (props) => {
         </div>
     )
 }
-
-//  ${showOptions ? styles["show"] : ""}
 
 export default Dropdown;
