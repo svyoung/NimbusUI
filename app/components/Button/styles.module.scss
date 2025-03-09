@@ -1,12 +1,22 @@
 @import "../../styles/colors";
+@import "../../styles/animations";
 
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
 .nimbus-button {
+    position: relative;
     padding: 0.6rem 1rem;
     border-radius: 0.7rem;
     border: 0;
     margin: 0.4rem 0;
     cursor: pointer;
-    min-width: 100px;
+    min-width: 7rem;
+    min-height: 2.1rem;
     box-shadow: 1px 1px 5px $light-gray;
     letter-spacing: 0.5px;
     font-weight: 500;

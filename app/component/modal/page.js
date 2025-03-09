@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Modal from "@/app/components/Modal";
+import Button from "@/app/components/Button";
 import styles from "./styles.module.scss"
 
 const ModalPage = () => {
@@ -17,14 +18,15 @@ const ModalPage = () => {
 
             <div className={styles["grid"]}>
                 <div>
-                    <button type="button" onClick={() => setIsModalOpen(true)}>Open Modal</button>
+                    <Button variant="primary" onClick={() => setIsModalOpen(true)} text="Open Modal" />
                     <Modal
                         open={isModalOpen}
+                        title="a title"
                         onExit={() => setIsModalOpen(false)}
                         footer={{
                             buttons: [
-                                <button key="hi">Button 1</button>,
-                                <button key="there">Button 2</button>
+                                <Button key="hi" text="Button 1" />,
+                                <Button key="there" text="Button 2" />
                             ]
                         }}
                     >

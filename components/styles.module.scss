@@ -1,14 +1,45 @@
 @import "../app/styles/fonts";
+@import "../app/styles/colors";
+
+.header-wrapper {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    background-color: $white;
+    min-height: 3rem;
+    padding: 0.2rem 1rem;
+    border-bottom: 1px solid $lightest-gray;
+    z-index: 1000;
+    max-width: 100%;
+
+    .nimbus-title {
+        @extend .title-font;
+        font-size: 1.9rem;
+        color: $brand-primary;
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            color: $brand-secondary;
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+            margin-left: -7px;
+        }
+    }
+}
 
 .component-item {
-    padding: 0.5rem 1rem;
-
     a {
-        color: rgb(49, 27, 27);
+        color: rgb(141, 80, 80);
+        display: block;
         transition: all 200ms;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        width: 100%;
 
         &:hover {
-            color: rgb(0, 0, 0);
+            color: $white;
+            background-color: rgb(174, 71, 71);
         }
     }
 }

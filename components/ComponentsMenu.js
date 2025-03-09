@@ -9,11 +9,9 @@ import styles from "./styles.module.scss";
 const ComponentMenu = ({ components }) => {
     const pathname = usePathname();
     if (!components) return;
-    console.log("pathname", pathname);
     return components.map(component => {
         const currPath = `${componentUrlPrefix}/${component.url}`
         const isCurrentPath = pathname === currPath;
-        console.log("isCurrentPath", isCurrentPath, pathname)
         return (
             <div key={component.name}>
                 <div className={`${styles["component-item"]} ${isCurrentPath ? styles["current-path"] : ""}`}>

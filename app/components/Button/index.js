@@ -3,7 +3,9 @@ import { ERROR, WARNING, SUCCESS, PRIMARY } from "@/lib/consts";
 import styles from "./styles.module.scss";
 
 const Button = (props) => {
-    const { text, variant, disabled = false, loading, onChange } = props;
+    const { text, variant, disabled = false, loading = false, onClick } = props;
+
+    if(!text) return;
 
     const getColor = (variant) => {
         if(variant === PRIMARY) return styles["primary"];
@@ -13,15 +15,16 @@ const Button = (props) => {
         return;
     }
     return (
-        <div>
-            <button
-                className={`${styles["nimbus-button"]} ${getColor(variant)} ${disabled && styles["disabled"]}`}
-                onChange={onChange}
-                type="button"
-            >
-                {text}
-            </button>
-        </div>
+        <button
+            className={`${styles["nimbus-button"]} ${getColor(variant)} ${disabled && styles["disabled"]}`}
+            onClick={onClick}
+            type="button"
+        >
+            {loading ?
+                <div className={styles["loading-spinner"]}></div>
+                : text
+            }
+        </button>
     )
 }
 

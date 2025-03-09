@@ -1,4 +1,6 @@
 
+@import "../styles/colors";
+
 .loading-spinner,
 .loading-spinner:after {
   box-sizing: border-box;
@@ -13,8 +15,8 @@
   height: 20px;
   margin: 8px;
   border-radius: 50%;
-  border: 1px solid currentColor;
-  border-color: currentColor transparent currentColor transparent;
+  border: 1px solid $mid-gray;
+  border-color: $mid-gray transparent $mid-gray $mid-gray;
   animation: loading-spinner 1.2s linear infinite;
 }
 

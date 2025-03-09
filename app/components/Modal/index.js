@@ -3,7 +3,7 @@ import { useClickOutside } from "@/hooks/useClickOutside";
 import styles from "./styles.module.scss";
 
 const Modal = (props) => {
-    const { children, open, onExit, footer } = props;
+    const { children, title, open, onExit, footer } = props;
     const { buttons } = footer;
     const modalContentRef = useRef(null);
     
@@ -15,9 +15,8 @@ const Modal = (props) => {
             <div className={styles["modal-content"]} ref={modalContentRef} >
                 <div className={styles["close"]} onClick={onExit}></div>
                 <div className={styles["modal-main"]}>
+                    {title && <h3>{title}</h3>}
                     {children}
-
-                    
                 </div>
                 {footer &&
                     <div className={styles["modal-footer"]}>

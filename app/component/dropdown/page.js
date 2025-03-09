@@ -10,6 +10,7 @@ const DropdownPage = () => {
     ]
     return (
         <div>
+            <h1>Dropdown</h1>
             This is the Dropdown page
 
             <div className={styles["grid"]}>

@@ -3,6 +3,7 @@ body {
   max-width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
@@ -20,4 +21,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.content {
+  div {
+    padding: 3rem;
+  }
 }
