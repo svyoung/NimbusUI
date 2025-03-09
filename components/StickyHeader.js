@@ -9,6 +9,7 @@ const StickyHeader = () => {
 
     return <div className={styles["header-wrapper"]}>
         <span className={styles["nimbus-title"]}>nimbus <span>UI</span></span>
+        <span>Created by Sam Vicki Young</span>
     </div>
 };
 

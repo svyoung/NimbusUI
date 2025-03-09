@@ -3,6 +3,7 @@
 
 .header-wrapper {
     display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     align-items: center;
@@ -32,17 +33,21 @@
     a {
         color: rgb(141, 80, 80);
         display: block;
-        transition: all 200ms;
+        transition: all 0.8s;
         cursor: pointer;
         padding: 0.5rem 1rem;
         width: 100%;
 
         &:hover {
-            color: $white;
-            background-color: rgb(174, 71, 71);
+            border-left: 10px solid $brand-primary;
         }
     }
 }
 .current-path {
-    background-color: rgb(244, 194, 194);
+    background-color: $brand-primary;
+
+    a {
+        color: $white;
+    }
+    
 }

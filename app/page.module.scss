@@ -19,16 +19,17 @@
       display: table-cell;
       vertical-align: top;
       width: 16rem;
-      background-color: rgb(248, 204, 204);
+      background-color: $lightest-gray;
       height: 100vh;
       overflow: auto;
+      box-shadow: inset 1px 1px 10px $light-gray;
   
       .component-list-header {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 400;
-        padding: 0.5rem 2rem;
-        color: $dark-gray;
-        border-bottom: 1px dotted $dark-gray;
+        padding: 0.5rem 1rem;
+        color: $brand-secondary;
+        border-bottom: 1px dashed $white;
       }
     }
 
@@ -39,9 +40,5 @@
       padding: 1rem 2rem;
     }
   }
-
-  
-
-  
 }
 
