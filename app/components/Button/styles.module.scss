@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+
+.nimbus-button {
+    padding: 0.6rem 1rem;
+    border-radius: 0.7rem;
+    border: 0;
+    margin: 0.4rem 0;
+    cursor: pointer;
+    min-width: 100px;
+    box-shadow: 1px 1px 5px $light-gray;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.primary {
+        background-color: $primary-blue;
+        color: $white;
+    }
+    &.error {
+        background-color: $danger;
+        color: $white;
+    }
+    &.warning {
+        background-color: $warning;
+        color: $white;
+    }
+    &.success {
+        background-color: $success;
+        color: $white;
+    }
+    &.disabled {
+        background-color: $light-gray;
+        text-shadow: 0 1px 1px $white;
+        color: $mid-gray;
+        pointer-events: none;
+    }
+}

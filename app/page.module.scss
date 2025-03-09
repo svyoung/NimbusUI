@@ -1,0 +1,27 @@
+
+@import "./styles/fonts";
+
+.main {
+  @extend .primary-font;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+
+  .component-list-menu {
+    
+    top: 0;
+    bottom: 0;
+    width: 13rem;
+    background-color: rgb(252, 219, 219);
+    height: 100vh;
+  }
+
+  .content {
+    color: rgb(74, 74, 74);
+    width: 75%;
+    height: 100vh;
+    padding: 2%;
+  }
+}
+

@@ -1,0 +1,17 @@
+.input {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    border: 0;
+    border: 1px solid hsl(0, 0%, 81%);
+    margin: 0.7rem 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus, &:focus-visible {
+        border: 1px solid rgb(144, 144, 144);
+        background-color: rgb(246, 246, 246);
+    }
+}

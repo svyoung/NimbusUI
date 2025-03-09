@@ -1,0 +1,17 @@
+@import "../app/styles/fonts";
+
+.component-item {
+    padding: 0.5rem 1rem;
+
+    a {
+        color: rgb(49, 27, 27);
+        transition: all 200ms;
+
+        &:hover {
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+.current-path {
+    background-color: rgb(244, 194, 194);
+}
