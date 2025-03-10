@@ -1,0 +1,61 @@
+
+@import "../../styles/variables";
+@import "../../styles/colors";
+
+
+@media (min-width: 250px) {
+    .order-summary-wrapper {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        min-width: 300px;
+        width: min-content;
+        font-size: 1.1rem;
+        @include box-shadow-default;
+
+        h3 {
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted $mid-gray;
+        }
+
+        .itemized-group {
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted $mid-gray;
+
+            .order-summary-itemized-column {
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+        
+                .quantity-label {
+                    font-size: 1rem;
+                    padding-left: 0.3rem;
+                }
+            }
+        }
+
+        .order-total-group { 
+            margin: 1rem 0;
+
+            .order-total {
+                display: flex;
+                justify-content: space-between;
+            }
+            .order-discount {
+                span {
+                    font-size: 1rem;
+                    padding-lefT: 0.3rem;
+                }
+            }
+            .order-final-total {
+                margin-top: 0.5rem;
+            }
+        }
+        
+    }
+}
+

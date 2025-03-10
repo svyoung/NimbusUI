@@ -52,6 +52,23 @@
     .component-list-menu {
         display: none;
         z-index: 1000;
+
+        h2 {
+            color: $brand-primary;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+        }
+        a {
+            color: rgb(141, 80, 80);
+            display: block;
+            transition: all 0.8s;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            &:hover {
+                border-left: 10px solid $brand-primary;
+            }
+        }
     }
     .current-path {
         background-color: $brand-primary;
@@ -68,9 +85,6 @@
         .component-list-header {
             font-size: 1.2rem;
             padding: 0.2rem 0.5rem;
-        }
-        .component-item {
-            padding: 0.4rem 1rem;
         }
     }
     .show-mobile-menu {
@@ -102,17 +116,9 @@
           color: $brand-secondary;
           border-bottom: 1px dashed $white;
         }
-        .component-item {
+        .current-path {
             a {
-                color: rgb(141, 80, 80);
-                display: block;
-                transition: all 0.8s;
-                cursor: pointer;
-                padding: 0.5rem 1rem;
-                width: 100%;
-                &:hover {
-                    border-left: 10px solid $brand-primary;
-                }
+                color: $white;
             }
         }
       }

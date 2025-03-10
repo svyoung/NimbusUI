@@ -13,10 +13,36 @@
 
       .content {
         display: block;
-        padding: 1rem 1rem;
+        padding: 1rem;
+      }
+
+      .content {
+        position: relative;
+
+        .error-page-wrapper {
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+
+        p {
+          padding: 0.5rem 0;
+        }
+
+        .showcase {
+          background-color: red;
+        }
+        
       }
     }
   }
+  
 }
 
 @media (min-width: 600px) {
@@ -41,7 +67,7 @@
         display: table-cell;
         overflow: auto;
         color: rgb(74, 74, 74);
-        
+        padding: 1rem 2rem;
       }
     }
   }  
