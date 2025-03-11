@@ -73,5 +73,24 @@
   }  
 }
 
+@media (min-width: 1200px) {
+  .main {
+    .main-content {
+      .content {
+        padding-inline: 1rem 12rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .main {
+    .main-content {
+      .content {
+        padding-inline: 2rem 22rem;
+      }
+    }
+  }
+}
 
 

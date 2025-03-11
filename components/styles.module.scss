@@ -52,28 +52,43 @@
     .component-list-menu {
         display: none;
         z-index: 1000;
-
         h2 {
             color: $brand-primary;
             font-size: 1.2rem;
             padding: 0.5rem 1rem;
         }
-        a {
-            color: rgb(141, 80, 80);
-            display: block;
-            transition: all 0.8s;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            width: 100%;
-            &:hover {
-                border-left: 10px solid $brand-primary;
+        .component-item {
+            a {
+                color: rgb(141, 80, 80);
+                display: block;
+                transition: all 0.8s;
+                cursor: pointer;
+                padding: 0.3rem 1rem;
+                width: 100%;
+                &:hover {
+                    border-left: 10px solid $brand-primary;
+                }
+            }
+            .inactive-component {
+                color: $dark-gray;
+                padding: 0.3rem 1rem;
+                span {
+                    color: $darkest-gray;
+                    font-size: 0.6rem;
+                    padding: 0.1rem 0.7rem;
+                    background-color: $light-gray;
+                    border-radius: 8px;
+                    margin: 0 0.7rem;
+                    text-shadow: 1px 1px 1px $white;
+                    font-weight: 500;
+                }
             }
         }
-    }
-    .current-path {
-        background-color: $brand-primary;
-        a {
-            color: $white;
+        .current-path {
+            background-color: $brand-primary;
+            a {
+                color: $white;
+            }
         }
     }
     .menu-mobile {
@@ -115,11 +130,6 @@
           padding: 0.5rem 1rem;
           color: $brand-secondary;
           border-bottom: 1px dashed $white;
-        }
-        .current-path {
-            a {
-                color: $white;
-            }
         }
       }
 }

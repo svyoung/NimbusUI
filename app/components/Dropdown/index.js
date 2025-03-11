@@ -26,9 +26,9 @@ const Dropdown = (props) => {
                         </>
                     }
                 </div>
-                <div className={`${styles["options-wrapper"]} ${showOptions && styles["show"]}`}>
+                <div className={`${styles["options-wrapper"]} ${showOptions && styles["show"]}`} role="listbox">
                     {options.map(option => (
-                        <div key={option.name} className={styles["option-list"]} onClick={() => selectOption(option.value)}>{option.name}</div>
+                        <div key={option.name} role="option" aria-selected={defaultValue === option.name} tabIndex="0" className={styles["option-list"]} onClick={() => selectOption(option.value)} ariaRole="list-box">{option.name}</div>
                     ))}
                 </div>
             </div>

@@ -12,7 +12,7 @@ const ComponentMenu = ({ isMobile, showMobileMenu, exitMenu }) => {
 
     const formattedList = {};
     componentList.forEach(component => {
-        formattedList[component.category] = [...formattedList[component.category] || "", { name: component.name, url: component.url}]
+        formattedList[component.category] = [...formattedList[component.category] || "", { name: component.name, url: component.url, active: component.active}]
     });
 
     const onClick = () => {
@@ -31,9 +31,15 @@ const ComponentMenu = ({ isMobile, showMobileMenu, exitMenu }) => {
                                 return (
                                     <div key={component.name} onClick={onClick}>
                                         <div className={`${styles["component-item"]} ${isCurrentPath ? styles["current-path"] : ""}`}>
-                                            <Link href={currPath}>
-                                                {capitalizeAllFirstLetters(component.name)}
-                                            </Link>
+                                            {component.active ? 
+                                                <Link href={currPath}>
+                                                    {capitalizeAllFirstLetters(component.name)}
+                                                </Link>
+                                                : 
+                                                <div className={styles["inactive-component"]}>
+                                                    {capitalizeAllFirstLetters(component.name)} <span>WIP</span>
+                                                </div>
+                                            }
                                         </div>
                                     </div>   
                                 )

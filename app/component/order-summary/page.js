@@ -1,15 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import OrderSummary from "@/app/components/OrderSummary";
 import styles from "./styles.module.scss"
 
 const OrderSummaryPage = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const data = {
         items: [
             {
-                name: "Black Shoes",
+                name: "Black Shoes with White Straps",
                 quantity: 2,
                 price: 14.59
             },

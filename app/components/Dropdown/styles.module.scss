@@ -1,57 +1,71 @@
 @import "../../styles/_colors.scss";
 @import "../../styles/animations";
 
-.show {
-    display: block !important;
-}
-.no-pointer-events {
-    pointer-events: none;
-}
-.loading-spinner {
-    position: absolute;
-    top: 0;
-    left: 3px;
-    z-index: 10;
-}
-.nimbus-dropdown-wrapper {
-    position: relative;
-    cursor: pointer;
-    margin: 1rem 0;
-
-    .default-option {
-        position: relative;
-        padding: 0.5rem;
-        min-height: 2.3rem;
-        box-shadow: 1px 1px 5px $light-gray;
-        border-radius: 0.6rem;
-        background-color: $white;
-
-        .arrow-icon {
-            color: $dark-gray;
-            position: absolute;
-            top: 0.6rem;
-            right: 0.8rem;
-        }
+@media (min-width: 200px) {
+    .show {
+        display: block !important;
     }
-    .options-wrapper {
+    .no-pointer-events {
+        pointer-events: none;
+    }
+    .loading-spinner {
         position: absolute;
-        top: 38px;
-        left: 0;
+        top: 0;
+        left: 3px;
+        z-index: 10;
+    }
+    .nimbus-dropdown-wrapper {
+        position: relative;
+        cursor: pointer;
+        margin: 1rem 0;
         width: 100%;
-        display: none;
-        box-shadow: 1px 1px 10px $light-gray;
-        border-radius: 0.6rem;
-        margin-top: 0.2rem;
-        z-index: 1000;
-        background: $white;
-        
-        .option-list {
-            color: rgb(78, 78, 78);
-            padding: 0.4rem 0.5rem;
-
-            &:hover {
+    
+        .default-option {
+            position: relative;
+            padding: 0.5rem;
+            min-height: 2.3rem;
+            box-shadow: 1px 1px 5px $light-gray;
+            border-radius: 0.6rem;
+            background-color: $white;
+    
+            .arrow-icon {
                 color: $dark-gray;
+                position: absolute;
+                top: 0.6rem;
+                right: 0.8rem;
             }
         }
+        .options-wrapper {
+            position: absolute;
+            top: 38px;
+            left: 0;
+            width: 100%;
+            display: none;
+            box-shadow: 1px 1px 10px $light-gray;
+            border-radius: 0.6rem;
+            margin-top: 0.2rem;
+            z-index: 1000;
+            background: $white;
+            
+            .option-list {
+                color: rgb(78, 78, 78);
+                padding: 0.4rem 0.5rem;
+    
+                &:hover {
+                    color: $dark-gray;
+                }
+            }
+        }
+    }    
+}
+@media (min-width: 800px) {
+    .nimbus-dropdown-wrapper {
+        max-width: calc(100% - 100px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .nimbus-dropdown-wrapper {
+        max-width: calc(100% - 300px);
     }
 }

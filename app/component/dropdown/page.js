@@ -11,7 +11,9 @@ const DropdownPage = () => {
     return (
         <div>
             <h1>Dropdown</h1>
-            This is the Dropdown page
+            <p>
+                The Dropdown component is a dynamic and accessible UI element with asynchronous loading capabilities. It allows users to select options from a list while efficiently handling large datasets or remote data sources. The component supports async fetching, ensuring options are loaded dynamically as needed, improving performance and user experience. It includes accessibility features such as keyboard navigation, screen reader support, and proper ARIA attributes, making it WCAG-compliant. With features like search, debounced API calls, and loading indicators, this dropdown ensures a smooth and responsive selection process.
+            </p>
 
             <div className={styles["grid"]}>
                 <div>

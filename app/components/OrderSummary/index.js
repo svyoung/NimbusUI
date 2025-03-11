@@ -19,7 +19,7 @@ const OrderSummary = ({ data, title }) => {
                                     {item.name} <br />
                                     <span className={styles["quantity-label"]}>Qty: {item.quantity}</span>
                                 </div>
-                                <div className={styles["price-cell"]} key={item.price}>
+                                <div className={`${styles["item-cell"]} ${styles["price-cell"]}`} key={item.price}>
                                     {formatCurrency(item.price)}
                                 </div>
                             </div>

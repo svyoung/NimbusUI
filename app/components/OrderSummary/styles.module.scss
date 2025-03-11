@@ -8,9 +8,8 @@
         margin: 1rem 0;
         padding: 1.5rem;
         border-radius: 1rem;
-        min-width: 300px;
-        width: min-content;
         font-size: 1.1rem;
+        width: 100%;
         @include box-shadow-default;
 
         h3 {
@@ -25,10 +24,18 @@
 
             .order-summary-itemized-column {
                 display: flex;
-                gap: 20px;
+                gap: 2rem;
                 justify-content: space-between;
                 &:not(:last-child) {
                     margin-bottom: 1rem;
+                }
+
+                .item-cell {
+                    max-width: 11rem;
+                }
+
+                .price-cell {
+                    text-align: right;
                 }
         
                 .quantity-label {
@@ -59,3 +66,9 @@
     }
 }
 
+@media (min-width: 400px) {
+    .order-summary-wrapper {
+        min-width: min-content;
+        width: max-content;
+    }
+}
